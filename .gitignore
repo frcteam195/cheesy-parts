@@ -2,3 +2,5 @@
 *.pid
 vendor
 .idea
+config.json
+deploy
