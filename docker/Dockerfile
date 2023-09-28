@@ -59,5 +59,8 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 9000
 
+RUN mkdir -p /var/lib/mysql_initial \
+    && cp -R /var/lib/mysql/. /var/lib/mysql_initial
+
 CMD ["/usr/bin/supervisord"]
 
