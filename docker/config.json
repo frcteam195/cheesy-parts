@@ -1,0 +1,23 @@
+{
+  "global": {
+    "db_host": "localhost",
+    "db_user": "root",
+    "db_database": "cheesy_parts",
+    "port": 9000,
+    "base_address": "https://inventory.team195.com",
+    "gmail_user": "cheesyparts@gmail.com",
+    "enable_wordpress_auth": false,
+    "hide_unused_fields": true
+    },
+  "dev": {
+    "db_password": "root",
+    "gmail_password": "staple",
+    "members_url": ""
+  },
+  "prod": {
+    "db_password": "root",
+    "gmail_password": "asdas",
+    "members_url": ""
+  }
+}
+
