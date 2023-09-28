@@ -9,13 +9,8 @@ RUN apt update \
     && ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime \
     && apt-get install -y tzdata \
     && dpkg-reconfigure --frontend noninteractive tzdata \
-    && apt install -y nano build-essential git curl autoconf bison 
-build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev 
-libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev mariadb-server 
-mariadb-client \
-    && curl -fsSL 
-https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | 
-bash \
+    && apt install -y nano build-essential git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev mariadb-server mariadb-client \
+    && curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash \
     && echo '#!/bin/bash' > /root/rbenv.env \
     && echo 'export PATH="/root/.rbenv/bin:${PATH}"' >> /root/rbenv.env \
     && echo 'eval "$(rbenv init -)"' >> /root/rbenv.env \
